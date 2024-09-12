@@ -1,0 +1,52 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Fish Soup",
+      "description": "A rich soup made with fresh fish, vegetables, and herbs.",
+      "price": 12.99,
+      "category": "Soups",
+      "img": "https://anitalianinmykitchen.com/wp-content/uploads/2018/01/fish-soup-sq-1-of-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Grilled Salmon",
+      "description": "Salmon fillet grilled to perfection, served with lemon butter sauce.",
+      "price": 18.99,
+      "category": "Main Courses",
+      "img": "https://img.freepik.com/free-photo/grilled-salmon-fillet-with-fresh-vegetable-salad-generated-by-ai_188544-21273.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Shrimp Salad",
+      "description": "Fresh shrimp tossed with greens, avocado, and citrus dressing.",
+      "price": 15.49,
+      "category": "Salads",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx0A_A4zALg0bnzVc0R78OYnqem_DZ0k3RQ&s"
+    },
+    {
+      "id": 4,
+      "name": "Fried Calamari",
+      "description": "Crispy calamari served with marinara sauce.",
+      "price": 9.99,
+      "category": "Starters",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeAQBp4TQkvkMzLgtJHU59reu8TxZo93XRDw&s"
+    },
+    {
+      "id": 5,
+      "name": "Lobster Bisque",
+      "description": "Creamy lobster soup with a hint of sherry.",
+      "price": 14.99,
+      "category": "Soups",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgwnMR575lvgJSde0NnEo6i4eayWy-J7K1w&s"
+    },
+    {
+      "id": 6,
+      "name": "Chocolate Lava Cake",
+      "description": "Rich chocolate cake with a gooey center, served with vanilla ice cream.",
+      "price": 7.99,
+      "category": "Desserts",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqaM0cCVxQQXHXT_QGA2befLdt35iuZGJUCA&s"
+    }
+  ]
+}
