@@ -1,4 +1,4 @@
-import { showError } from "./helper.js";
+import { showAddModal, showError } from "./helper.js";
 import dom from "./selectors.js";
 import { getMenu } from "./service.js";
 import renderProduct from "./ui.js";
@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   if (menu && menu.length > 0) {
     renderProduct(menu);
+    showError("", "hidden");
   } else {
     showError("No menu items available", "flex");
   }
@@ -31,6 +32,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     if (allValid) {
       await window.addMenu(formData)
+      window.location.reload()
     }
   });
 });
