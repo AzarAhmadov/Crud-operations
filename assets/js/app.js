@@ -1,4 +1,4 @@
-import { showAddModal, showError } from "./helper.js";
+import { showError } from "./helper.js";
 import dom from "./selectors.js";
 import { getMenu } from "./service.js";
 import renderProduct from "./ui.js";
@@ -16,23 +16,29 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   dom.add_menu_form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    let allValid = true
+    let allValid = true;
     const formData = {};
 
     for (let input of e.target.elements) {
       if (input.tagName !== "BUTTON") {
-        const isValid = formValidation(input)
+        const isValid = formValidation(input);
         if (!isValid) {
-          allValid = false
+          allValid = false;
         } else {
-          formData[input.name] = input.value
+          formData[input.name] = input.value;
         }
       }
     }
 
     if (allValid) {
-      await window.addMenu(formData)
+      if (formData.id) {
+        await window.updateMenu(formData);
+      } else {
+        await window.addMenu(formData);
+      }
+      dom.add_menu_form.reset();
       window.location.reload()
     }
   });
+
 });
