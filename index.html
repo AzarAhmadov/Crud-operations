@@ -17,6 +17,7 @@
     />
   </head>
   <body>
+    <!-- Header -->
     <div
       class="bg-cover bg-center h-[8rem] md:h-[12rem] grid place-items-center rounded-b-[3rem] md:rounded-b-[7rem]"
       style="
@@ -34,6 +35,9 @@
         Restaurant menu <i class="fa-solid fa-utensils"></i>
       </h1>
     </div>
+    <!-- Header -->
+
+    <!-- Menu Header -->
     <div class="max-w-[80rem] mx-auto px-3">
       <div
         class="flex items-center z-10 gap-x-3 justify-between border-b py-6 sticky top-0 bg-white"
@@ -45,6 +49,7 @@
           <i class="fa-solid fa-clipboard-list text-black"></i>
         </h2>
         <button
+          onclick="AddModal()"
           class="bg-[#FEAF00] text-sm hover:scale-110 transition-all text-white rounded-md py-2 px-5 flex items-center gap-x-3"
         >
           Add new product <i class="fa-solid fa-plus text-white"></i>
@@ -69,11 +74,16 @@
         ></div>
       </div>
     </div>
+    <!-- Menu Header -->
 
+    <!-- Menu Item Delete Modal -->
     <div
+      onclick="allowDelete(event)"
       class="delete_modal fixed inset-0 bg-gray-600 bg-opacity-50 backdrop-blur-sm z-10 flex items-center justify-center"
     >
-      <div class="bg-white rounded-lg shadow-lg max-w-[355px] md:max-w-[400px]">
+      <div
+        class="bg-white rounded-lg shadow-lg w-full max-w-[355px] md:max-w-[400px]"
+      >
         <div class="p-7 border-b text-xl font-bold text-center">
           Are you sure you want to delete?
         </div>
@@ -93,6 +103,74 @@
         </div>
       </div>
     </div>
+    <!-- Menu Item Delete Modal -->
+
+    <!-- Add Menu Item Modal -->
+    <div
+      class="add_modal fixed inset-0 py-3 bg-gray-600 bg-opacity-50 backdrop-blur-sm z-10 flex items-center justify-center"
+    >
+      <div
+        class="bg-white overflow-y-auto max-h-full rounded-lg shadow-lg w-full max-w-[355px] md:max-w-[400px]"
+      >
+        <div
+          class="p-7 flex items-center justify-between border-b text-xl font-bold text-center"
+        >
+          <p>Create menu item</p>
+          <button onclick="closeModal()">
+            <i class="fa-solid fa-xmark text-red-500 text-2xl"></i>
+          </button>
+        </div>
+        <form id="add_product_form" class="p-7 space-y-4">
+          <div class="flex flex-col">
+            <label class="font-medium text-md mb-2" for="img">
+              Image src
+            </label>
+            <input
+              id="img"
+              class="border p-2 rounded-md outline-none"
+              type="text"
+              placeholder="image src"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="font-medium text-md mb-2" for="name"> Name </label>
+            <input
+              id="name"
+              class="border p-2 rounded-md outline-none"
+              type="text"
+              placeholder="Name"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="font-medium text-md mb-2" for="category">
+              Category
+            </label>
+            <input
+              id="category"
+              class="border p-2 rounded-md outline-none"
+              type="text"
+              placeholder="Category"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="font-medium text-md mb-2" for="price"> Price </label>
+            <input
+              id="price"
+              class="border p-2 rounded-md outline-none"
+              type="text"
+              placeholder="Price"
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-green-600 w-full py-2 text-white rounded-md hover:scale-105 transition-all"
+          >
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Add Menu Item Modal -->
 
     <script type="module" src="assets/js/app.js"></script>
   </body>
