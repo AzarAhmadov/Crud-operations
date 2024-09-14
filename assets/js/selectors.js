@@ -5,7 +5,7 @@ const dom = {
   delete_modal: document.querySelector(".delete_modal"),
   add_modal: document.querySelector(".add_modal"),
   modal_control: document.querySelector("#modal_control"),
-  add_product_form: document.querySelector("#add_product_form"),
+  add_menu_form: document.querySelector("#add_menu_form"),
 };
 
 export default dom;
