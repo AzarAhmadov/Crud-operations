@@ -5,11 +5,11 @@ const renderProduct = (data) => {
 
   for (let item of data) {
     html += `
-    <tr class="bg-white border-b">
+    <tr class="bg-white hover:bg-[#f0f3f4] transition-all">
         <td class="pl-6 py-4">
           <img
             class="size-[3rem] md:size-[5rem] rounded-md object-cover"
-            src="${item.image}"
+            src="${item.img}"
             alt="${item.name}"
           />
         </td>
@@ -32,4 +32,4 @@ const renderProduct = (data) => {
   dom.table_body.innerHTML = html;
 };
 
-export default renderProduct
+export default renderProduct;
