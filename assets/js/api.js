@@ -4,6 +4,7 @@ const API = {
   menu: "menu",
   delete: "menu/:id",
   post: "menu",
+  menuById: "menu/:id"
 };
 
 export { BASE_URL, API };
