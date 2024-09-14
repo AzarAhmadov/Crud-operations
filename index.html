@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/app.css" />
   </head>
   <body>
+    
     <!-- Header -->
     <div
       class="bg-cover bg-center h-[8rem] md:h-[12rem] grid place-items-center rounded-b-[3rem] md:rounded-b-[7rem]"
@@ -45,7 +46,7 @@
           <i class="fa-solid fa-clipboard-list text-black"></i>
         </h2>
         <button
-          onclick="AddModal()"
+          onclick="OpenModal()"
           class="bg-[#FEAF00] text-sm hover:scale-110 transition-all text-white rounded-md py-2 px-5 flex items-center gap-x-3"
         >
           Add new product <i class="fa-solid fa-plus text-white"></i>
@@ -108,68 +109,72 @@
         <div
           class="p-5 md:p-7 flex items-center justify-between border-b text-xl font-bold text-center"
         >
-          <p>Create menu item</p>
+          <p id="modal-title"></p>
           <button onclick="closeModal()">
             <i class="fa-solid fa-xmark text-red-500 text-2xl"></i>
           </button>
         </div>
-        <form id="add_menu_form" class="p-7 space-y-4">
-          <div class="flex flex-col">
-            <label class="font-medium text-md mb-2" for="img">
-              Image src
-            </label>
-            <input
-              data-required="true"
-              data-https="https://"
-              name="img"
-              id="img"
-              class="border p-2 rounded-md outline-none"
-              type="text"
-              placeholder="image src"
-            />
+        <form id="add_menu_form">
+          <input class="hidden" type="hidden" name="id" id="menu_id" />
+          <div class="p-7 space-y-4">
+            <div class="flex flex-col">
+              <label class="font-medium text-md mb-2" for="img">
+                Image src
+              </label>
+              <input
+                data-required="true"
+                data-https="https://"
+                name="img"
+                id="img"
+                class="border p-2 rounded-md outline-none"
+                type="text"
+                placeholder="image src"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="font-medium text-md mb-2" for="name"> Name </label>
+              <input
+                data-required="true"
+                name="name"
+                id="name"
+                class="border p-2 rounded-md outline-none"
+                type="text"
+                placeholder="Name"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="font-medium text-md mb-2" for="category">
+                Category
+              </label>
+              <input
+                data-required="true"
+                name="category"
+                id="category"
+                class="border p-2 rounded-md outline-none"
+                type="text"
+                placeholder="Category"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="font-medium text-md mb-2" for="price">
+                Price
+              </label>
+              <input
+                data-tel="true"
+                data-required="true"
+                name="price"
+                id="price"
+                class="border p-2 rounded-md outline-none"
+                type="text"
+                placeholder="Price"
+              />
+            </div>
+            <button
+              id="modal-btn-name"
+              type="submit"
+              class="bg-green-600 w-full py-2 text-white rounded-md hover:scale-105 transition-all"
+            ></button>
           </div>
-          <div class="flex flex-col">
-            <label class="font-medium text-md mb-2" for="name"> Name </label>
-            <input
-              data-required="true"
-              name="name"
-              id="name"
-              class="border p-2 rounded-md outline-none"
-              type="text"
-              placeholder="Name"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label class="font-medium text-md mb-2" for="category">
-              Category
-            </label>
-            <input
-              data-required="true"
-              name="category"
-              id="category"
-              class="border p-2 rounded-md outline-none"
-              type="text"
-              placeholder="Category"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label class="font-medium text-md mb-2" for="price"> Price </label>
-            <input
-              data-tel="true"
-              data-required="true"
-              name="price"
-              id="price"
-              class="border p-2 rounded-md outline-none"
-              type="text"
-              placeholder="Price"
-            />
-          </div>
-          <button
-            type="submit"
-            class="bg-green-600 w-full py-2 text-white rounded-md hover:scale-105 transition-all"
-          >
-            Add
-          </button>
         </form>
       </div>
     </div>
