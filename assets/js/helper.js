@@ -47,4 +47,8 @@ window.AddModal = () => {
   showAddModal("show");
 };
 
-export { showError, showDeleteModal, showAddModal,removeErrorMsg };
+const allowOnlyNumbers = (str) => {
+  return /^[0-9]+$/.test(str);
+};
+
+export { showError, showDeleteModal, showAddModal, removeErrorMsg, allowOnlyNumbers };
