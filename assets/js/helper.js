@@ -41,9 +41,16 @@ const removeErrorMsg = (form) => {
 
 window.closeModal = () => {
   showAddModal("");
+  resetForm()
 };
 
-window.AddModal = () => {
+const resetForm = () => {
+  dom.add_menu_form.reset();
+}
+
+window.OpenModal = (modalTitle = "Create menu item", btnName = "Create") => {
+  dom.modal_btn_name.textContent = btnName
+  dom.modal_title.textContent = modalTitle
   showAddModal("show");
 };
 
@@ -51,4 +58,12 @@ const allowOnlyNumbers = (str) => {
   return /^[0-9]+$/.test(str);
 };
 
-export { showError, showDeleteModal, showAddModal, removeErrorMsg, allowOnlyNumbers };
+const fillForm = (data) => {
+  dom.add_menu_form.img.value = data.img;
+  dom.add_menu_form.name.value = data.name;
+  dom.add_menu_form.category.value = data.category;
+  dom.add_menu_form.price.value = data.price;
+  dom.add_menu_form.menu_id.value = data.id;
+}
+
+export { showError, showDeleteModal, showAddModal, removeErrorMsg, allowOnlyNumbers, fillForm };
