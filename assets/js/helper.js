@@ -1,8 +1,15 @@
 import dom from "./selectors.js";
 
-const showError = (text = "No menu items available", status = "none") => {
-  dom.error.style.display = status;
-  dom.error.textContent = text;
+const showError = (text = "No menu items available", status = "flex") => {
+  let error_paragraph = "";
+
+  error_paragraph = `
+   <p class="${status} text-center text-red-500 text-lg font-[500] mt-10">
+        ${text}
+    </p>
+  `;
+
+  dom.error.innerHTML = error_paragraph;
 };
 
 const showDeleteModal = (status) => {
@@ -25,6 +32,13 @@ const showAddModal = (status) => {
   }
 };
 
+const removeErrorMsg = (form) => {
+  const errorEl = form.closest("div").querySelector(".error-el");
+  if (errorEl) {
+    errorEl.remove();
+  }
+};
+
 window.closeModal = () => {
   showAddModal("");
 };
@@ -33,4 +47,4 @@ window.AddModal = () => {
   showAddModal("show");
 };
 
-export { showError, showDeleteModal, showAddModal };
+export { showError, showDeleteModal, showAddModal,removeErrorMsg };
