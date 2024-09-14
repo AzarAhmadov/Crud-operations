@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 
+body.overflow {
+  overflow: hidden;
+}
+
 .delete_modal {
   transform: scale(0);
   opacity: 0;
@@ -11,6 +15,20 @@ body {
 }
 
 .delete_modal.show {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.add_modal {
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms all;
+  transform: scale(1.3);
+}
+
+.add_modal.show {
   transform: scale(1);
   opacity: 1;
   visibility: visible;
