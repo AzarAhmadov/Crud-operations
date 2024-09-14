@@ -20,9 +20,7 @@ const renderProduct = (data) => {
           <button onclick="getMenuById(${item.id})" class="bg-green-500 text-sm hover:bg-green-700 text-white py-2 px-5 rounded-md">
             Edit
           </button>
-          <button 
-          onClick='getDelete(${item.id})'
-          class="bg-red-500 text-sm hover:bg-red-700 text-white py-2 px-5 rounded-md">
+          <button onclick="getDelete(${item.id})" class="bg-red-500 text-sm hover:bg-red-700 text-white py-2 px-5 rounded-md">
             Delete
           </button>
         </td>
@@ -32,4 +30,4 @@ const renderProduct = (data) => {
   dom.table_body.innerHTML = html;
 };
 
-export default renderProduct;
+export default renderProduct
