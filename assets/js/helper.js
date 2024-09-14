@@ -6,7 +6,31 @@ const showError = (text = "No menu items available", status = "none") => {
 };
 
 const showDeleteModal = (status) => {
-  status = status === "show" ? dom.delete_modal.classList.add("show") : dom.delete_modal.classList.remove("show");
+  if (status === "show") {
+    dom.delete_modal.classList.add("show");
+    document.body.classList.add("overflow");
+  } else {
+    dom.delete_modal.classList.remove("show");
+    document.body.classList.remove("overflow");
+  }
 };
 
-export { showError, showDeleteModal };
+const showAddModal = (status) => {
+  if (status === "show") {
+    dom.add_modal.classList.add("show");
+    document.body.classList.add("overflow");
+  } else {
+    dom.add_modal.classList.remove("show");
+    document.body.classList.remove("overflow");
+  }
+};
+
+window.closeModal = () => {
+  showAddModal("");
+};
+
+window.AddModal = () => {
+  showAddModal("show");
+};
+
+export { showError, showDeleteModal, showAddModal };
