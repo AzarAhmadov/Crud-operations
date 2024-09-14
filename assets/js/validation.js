@@ -32,6 +32,7 @@ const formValidation = (form) => {
             "beforeend",
             `<p class="error-el mt-2 text-[#F22B2B] text-[13px]">Only the number can be entered</p>`
         );
+        isValid = false
     }
     else {
         form.classList.remove("!border-red-500");
