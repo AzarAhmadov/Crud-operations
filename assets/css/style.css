@@ -44,3 +44,7 @@ body.overflow {
   background-color: #000;
   border-radius: 10px;
 }
+
+.fast-animation {
+  animation-duration: 0.1s;
+}
