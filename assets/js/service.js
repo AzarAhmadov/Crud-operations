@@ -1,6 +1,5 @@
 import { API, BASE_URL } from "./api.js";
 import { showDeleteModal } from "./helper.js";
-import dom from "./selectors.js";
 import renderProduct from "./ui.js";
 
 const getMenu = async () => {
@@ -19,7 +18,7 @@ const getMenu = async () => {
 window.getDelete = (id) => {
   showDeleteModal("show");
 
-  const allowDelete = (e) => {
+  window.allowDelete = (e) => {
     const obj = e.target.closest("[data-allow]");
     const data_allow = obj?.dataset.allow;
 
@@ -28,11 +27,8 @@ window.getDelete = (id) => {
         deleteMenuById(id);
       }
       showDeleteModal("hide");
-      dom.modal_control.remove.addEventListener("click", allowDelete);
     }
   };
-
-  dom.modal_control.addEventListener("click", allowDelete);
 };
 
 const deleteMenuById = async (id) => {
