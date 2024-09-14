@@ -6,6 +6,8 @@ const dom = {
   add_modal: document.querySelector(".add_modal"),
   modal_control: document.querySelector("#modal_control"),
   add_menu_form: document.querySelector("#add_menu_form"),
+  modal_btn_name: document.querySelector('#modal-btn-name'),
+  modal_title: document.querySelector('#modal-title')
 };
 
 export default dom;
