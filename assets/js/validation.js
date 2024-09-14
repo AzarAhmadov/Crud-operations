@@ -18,6 +18,7 @@ const formValidation = (form) => {
         isValid = false
 
     }
+
     else if (value.trim() && data_https && !value.trim().startsWith(data_https)) {
         form.closest("div").insertAdjacentHTML(
             "beforeend",
@@ -34,6 +35,7 @@ const formValidation = (form) => {
         );
         isValid = false
     }
+
     else {
         form.classList.remove("!border-red-500");
     }
