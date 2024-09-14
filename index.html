@@ -68,10 +68,7 @@
           </thead>
           <tbody id="table_body" class="whitespace-nowrap"></tbody>
         </table>
-        <div
-          id="error-message"
-          class="text-center text-red-500 text-lg font-[500] mt-10"
-        ></div>
+        <div id="error-message" class="flex justify-center"></div>
       </div>
     </div>
     <!-- Menu Header -->
@@ -87,7 +84,7 @@
         <div class="p-7 border-b text-xl font-bold text-center">
           Are you sure you want to delete?
         </div>
-        <div id="modal_control" class="flex justify-between gap-x-5 px-7 py-5">
+        <div id="modal_control" class="flex justify-between gap-x-3 px-7 py-5">
           <button
             data-allow="yes"
             class="bg-red-500 w-full text-white px-4 py-2 rounded hover:bg-red-600"
@@ -113,19 +110,22 @@
         class="bg-white overflow-y-auto max-h-full rounded-lg shadow-lg w-full max-w-[355px] md:max-w-[400px]"
       >
         <div
-          class="p-7 flex items-center justify-between border-b text-xl font-bold text-center"
+          class="p-5 md:p-7 flex items-center justify-between border-b text-xl font-bold text-center"
         >
           <p>Create menu item</p>
           <button onclick="closeModal()">
             <i class="fa-solid fa-xmark text-red-500 text-2xl"></i>
           </button>
         </div>
-        <form id="add_product_form" class="p-7 space-y-4">
+        <form id="add_menu_form" class="p-7 space-y-4">
           <div class="flex flex-col">
             <label class="font-medium text-md mb-2" for="img">
               Image src
             </label>
             <input
+              data-required="true"
+              data-https="https://"
+              name="img"
               id="img"
               class="border p-2 rounded-md outline-none"
               type="text"
@@ -135,6 +135,8 @@
           <div class="flex flex-col">
             <label class="font-medium text-md mb-2" for="name"> Name </label>
             <input
+              data-required="true"
+              name="name"
               id="name"
               class="border p-2 rounded-md outline-none"
               type="text"
@@ -146,6 +148,8 @@
               Category
             </label>
             <input
+              data-required="true"
+              name="category"
               id="category"
               class="border p-2 rounded-md outline-none"
               type="text"
@@ -155,6 +159,8 @@
           <div class="flex flex-col">
             <label class="font-medium text-md mb-2" for="price"> Price </label>
             <input
+              data-required="true"
+              name="price"
               id="price"
               class="border p-2 rounded-md outline-none"
               type="text"
