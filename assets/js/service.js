@@ -18,7 +18,7 @@ const getMenu = async () => {
 window.addMenu = async (data) => {
   try {
 
-    data.id = Math.floor(10000 + Math.random() * 90000);
+    data.id = String(Math.floor(10000 + Math.random() * 90000));
 
     const res = await fetch(`${BASE_URL}/${API.post}`, {
       method: "POST",

@@ -8,32 +8,18 @@
       "price": "12"
     },
     {
-      "id": 28783,
+      "id": "28783",
       "img": "https://img.freepik.com/free-photo/grilled-salmon-fillet-with-fresh-vegetable-salad-generated-by-ai_188544-21273.jpg",
       "name": "Grilled Salmon",
       "category": "Main Courses",
       "price": "18"
     },
     {
-      "id": 57433,
+      "id": "57433",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx0A_A4zALg0bnzVc0R78OYnqem_DZ0k3RQ&s",
       "name": "Shrimp Salad",
       "category": "Salads",
-      "price": "15"
-    },
-    {
-      "id": 67795,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgwnMR575lvgJSde0NnEo6i4eayWy-J7K1w&s",
-      "name": "Lobster Bisque",
-      "category": "Soups",
-      "price": "15"
-    },
-    {
-      "id": 26691,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqaM0cCVxQQXHXT_QGA2befLdt35iuZGJUCA&s",
-      "name": "Chocolate Lava Cake",
-      "category": "Desserts",
-      "price": "8"
+      "price": "25"
     }
   ]
 }
